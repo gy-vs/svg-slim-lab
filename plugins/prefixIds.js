@@ -1,5 +1,6 @@
 import * as csstree from 'css-tree';
 import { referencesProps } from './_collections.js';
+import { regReferencesUrl } from '../lib/svgo/tools.js';
 
 /**
  * @typedef PrefixIdsParams
@@ -239,9 +240,9 @@ export const fn = (_root, params, info) => {
             node.attributes[name].length !== 0
           ) {
             node.attributes[name] = node.attributes[name].replace(
-              /\burl\((["'])?(#.+?)\1\)/gi,
-              (match, _, url) => {
-                const prefixed = prefixReference(prefixGenerator, url);
+              regReferencesUrl,
+              (match, _, id) => {
+                const prefixed = prefixReference(prefixGenerator, `#${id}`);
                 if (prefixed == null) {
                   return match;
                 }

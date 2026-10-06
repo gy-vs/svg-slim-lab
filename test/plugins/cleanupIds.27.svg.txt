@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="gradient001">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+        <linearGradient id="gradient002">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+        <linearGradient id="gradient003">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+        <linearGradient id="gradient004">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+        <linearGradient id="gradient005">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+    </defs>
+    <rect width="10" height="10" fill="url( #gradient001 )"/>
+    <rect width="10" height="10" fill="URL(#gradient002)"/>
+    <rect width="10" height="10" fill="url( '#gradient003' )"/>
+    <rect width="10" height="10" fill="url(
+#gradient004)"/>
+    <rect width="10" height="10" style="fill: url( #gradient005 )"/>
+</svg>
+
+@@@
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="a">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+        <linearGradient id="b">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+        <linearGradient id="c">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+        <linearGradient id="d">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+        <linearGradient id="e">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+    </defs>
+    <rect width="10" height="10" fill="url( #a )"/>
+    <rect width="10" height="10" fill="URL(#b)"/>
+    <rect width="10" height="10" fill="url( '#c' )"/>
+    <rect width="10" height="10" fill="url(
+#d)"/>
+    <rect width="10" height="10" style="fill: url( #e )"/>
+</svg>

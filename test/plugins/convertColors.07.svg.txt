@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <rect width="10" height="10" fill="url( #Brand )"/>
+    <rect width="10" height="10" fill="URL(#Brand)"/>
+    <rect width="10" height="10" fill="url( '#Brand' )"/>
+    <rect width="10" height="10" fill="#FF0000"/>
+</svg>
+
+@@@
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <rect width="10" height="10" fill="url( #Brand )"/>
+    <rect width="10" height="10" fill="URL(#Brand)"/>
+    <rect width="10" height="10" fill="url( '#Brand' )"/>
+    <rect width="10" height="10" fill="red"/>
+</svg>

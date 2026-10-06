@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="gradient001">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+        <linearGradient id="gradient002">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+        <linearGradient id="gradient003">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+    </defs>
+    <rect width="10" height="10" fill="url( #gradient001 )"/>
+    <rect width="10" height="10" fill="url( '#gradient002' )"/>
+    <rect width="10" height="10" fill="url(
+#gradient003)"/>
+</svg>
+
+@@@
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="prefixIds_14_svg_txt__gradient001">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+        <linearGradient id="prefixIds_14_svg_txt__gradient002">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+        <linearGradient id="prefixIds_14_svg_txt__gradient003">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+    </defs>
+    <rect width="10" height="10" fill="url(#prefixIds_14_svg_txt__gradient001)"/>
+    <rect width="10" height="10" fill="url(#prefixIds_14_svg_txt__gradient002)"/>
+    <rect width="10" height="10" fill="url(#prefixIds_14_svg_txt__gradient003)"/>
+</svg>
