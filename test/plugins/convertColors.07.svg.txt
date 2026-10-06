@@ -1,0 +1,36 @@
+Do not touch the casing of URL references with case-insensitive url() names,
+whitespace or quotes inside the parentheses, while still converting ordinary
+colors.
+
+===
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <defs>
+        <linearGradient id="Brand">
+            <stop offset="0" stop-color="#FF0000"/>
+        </linearGradient>
+    </defs>
+    <rect fill="url(#Brand)"/>
+    <rect fill="url( #Brand )"/>
+    <rect fill="URL(#Brand)"/>
+    <rect fill="url( &#39;#Brand&#39; )"/>
+    <rect fill="url(&#10;#Brand)"/>
+    <rect fill="#FF0000"/>
+</svg>
+
+@@@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <defs>
+        <linearGradient id="Brand">
+            <stop offset="0" stop-color="red"/>
+        </linearGradient>
+    </defs>
+    <rect fill="url(#Brand)"/>
+    <rect fill="url( #Brand )"/>
+    <rect fill="URL(#Brand)"/>
+    <rect fill="url( '#Brand' )"/>
+    <rect fill="url(
+#Brand)"/>
+    <rect fill="red"/>
+</svg>

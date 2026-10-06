@@ -233,13 +233,15 @@ export const fn = (_root, params, info) => {
         }
 
         // prefix a URL attribute value
+        // the url() function name is case-insensitive and whitespace
+        // (including newlines) is allowed inside the parentheses
         for (const name of referencesProps) {
           if (
             node.attributes[name] != null &&
             node.attributes[name].length !== 0
           ) {
             node.attributes[name] = node.attributes[name].replace(
-              /\burl\((["'])?(#.+?)\1\)/gi,
+              /\burl\(\s*(["'])?\s*(#.+?)\s*\1\s*\)/gi,
               (match, _, url) => {
                 const prefixed = prefixReference(prefixGenerator, url);
                 if (prefixed == null) {

@@ -1,0 +1,40 @@
+URL references with case-insensitive url() names, whitespace or quotes inside
+the parentheses should be treated the same as url(#id) and renamed on both
+sides; unreferenced IDs are still removed.
+
+===
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="Brand">
+            <stop/>
+        </linearGradient>
+        <linearGradient id="unused">
+            <stop/>
+        </linearGradient>
+    </defs>
+    <rect fill="url(#Brand)"/>
+    <rect fill="url( #Brand )"/>
+    <rect fill="URL(#Brand)"/>
+    <rect fill="url( &#39;#Brand&#39; )"/>
+    <rect fill="url(&#10;#Brand)"/>
+</svg>
+
+@@@
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="a">
+            <stop/>
+        </linearGradient>
+        <linearGradient>
+            <stop/>
+        </linearGradient>
+    </defs>
+    <rect fill="url(#a)"/>
+    <rect fill="url( #a )"/>
+    <rect fill="URL(#a)"/>
+    <rect fill="url( '#a' )"/>
+    <rect fill="url(
+#a)"/>
+</svg>

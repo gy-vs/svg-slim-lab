@@ -1,0 +1,33 @@
+Prefix IDs in URL references with case-insensitive url() names, whitespace or
+quotes inside the parentheses; both sides are prefixed and the reference is
+normalized to the canonical url(#id) form.
+
+===
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="Brand">
+            <stop/>
+        </linearGradient>
+    </defs>
+    <rect fill="url(#Brand)"/>
+    <rect fill="url( #Brand )"/>
+    <rect fill="URL(#Brand)"/>
+    <rect fill="url( &#39;#Brand&#39; )"/>
+    <rect fill="url(&#10;#Brand)"/>
+</svg>
+
+@@@
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="prefixIds_14_svg_txt__Brand">
+            <stop/>
+        </linearGradient>
+    </defs>
+    <rect fill="url(#prefixIds_14_svg_txt__Brand)"/>
+    <rect fill="url(#prefixIds_14_svg_txt__Brand)"/>
+    <rect fill="url(#prefixIds_14_svg_txt__Brand)"/>
+    <rect fill="url(#prefixIds_14_svg_txt__Brand)"/>
+    <rect fill="url(#prefixIds_14_svg_txt__Brand)"/>
+</svg>
